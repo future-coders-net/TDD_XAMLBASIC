@@ -9,8 +9,14 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Button x:Name="MyButton" Background="Blue" Foreground="White">
-            <TextBlock x:Name="MyButtonText" FontSize="50" >Click Me!</TextBlock>
-        </Button>
+        <StackPanel>
+            <Button Width="200" FontSize="50" 
+                Foreground="White" Background="Red">Hello</Button>
+            <Button Width="200" FontSize="50" 
+                Foreground="White" Background="Green">World</Button>
+            <Button Width="200" FontSize="50" 
+                Foreground="White" Background="Blue">XAML</Button>
+        </StackPanel>
     </Grid>
+
 </Page>
