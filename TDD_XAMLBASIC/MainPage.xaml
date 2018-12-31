@@ -8,22 +8,28 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Page.Resources>
-        <Style TargetType="Button">
+        <Style x:Key="Large" TargetType="Button">
             <Setter Property="Width" Value="200"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontSize" Value="50"/>
         </Style>
+        <Style x:Key="Small" TargetType="Button">
+            <Setter Value="100" Property="Width"/>
+        </Style>
     </Page.Resources>
-
     <Grid>
         <StackPanel>
-            <Button Width="200" FontSize="50" 
-                Foreground="White" Background="Red">Hello</Button>
-            <Button Width="200" FontSize="50" 
-                Foreground="White" Background="Green">World</Button>
-            <Button Width="200" FontSize="50" 
-                Foreground="White" Background="Blue">XAML</Button>
+            <Button Style="{StaticResource Large}" 
+                    Background="Red">Hello</Button>
+            <Button Style="{StaticResource Large}" 
+                    Background="Green">World</Button>
+
+            <Button Style="{StaticResource Small}"
+                    Background="Red">Hello</Button>
+            <Button Style="{StaticResource Small}" 
+                    Background="Green">World</Button>
         </StackPanel>
     </Grid>
+
 
 </Page>
